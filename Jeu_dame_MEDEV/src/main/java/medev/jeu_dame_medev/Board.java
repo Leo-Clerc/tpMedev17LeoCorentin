@@ -14,6 +14,8 @@ public class Board {
     
     private ArrayList<Piece> board;
     
-    
+    public boolean estDansLePlateau(Point2D pos){
+        return (pos.getX()>-1 && pos.getX()<10 && pos.getY()>-1 && pos.getY()<10)
+    }
     
 }
