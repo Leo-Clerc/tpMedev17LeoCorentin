@@ -8,6 +8,15 @@ package medev.jeu_dame_medev;
  *
  * @author coco
  */
-public class Dame extends Piece {
+public class Dame extends Piece implements deplace {
+    
+    
+    
+    @Override
+    public boolean deplace(Board b) {
+    
+        boolean a = true;
+        return a;
+    }
     
 }
