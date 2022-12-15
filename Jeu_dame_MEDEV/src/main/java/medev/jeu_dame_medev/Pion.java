@@ -24,10 +24,16 @@ public class Pion extends Piece implements deplace {
     
     
     @Override
-    public boolean deplace(Board b) {
-        boolean a = true;
-        
-        return a;
+    public void deplace(Boolean versDroite, Board b) {
+        Point2D pos = this.getPos();
+        int vertical = - this.getColor();
+        if(versDroite){
+            int horizontal = 1;
+        }
+        else{
+            int horizontal = -1;
+        }
+        if()
     }
     
     
