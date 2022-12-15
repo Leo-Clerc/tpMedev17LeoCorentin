@@ -33,7 +33,16 @@ public class Pion extends Piece implements deplace {
         else{
             int horizontal = -1;
         }
-        if()
+        Point2D nvllePos = new Point2D(pos.getX()+horizontal, pos.getY()+vertical);
+        if(!estDansLePlateau(nvllePos)){
+            System.out.println("Coup illégal");
+        }
+        if(b.manger(pos,versDroite)){
+            b.mange();
+        }
+        else if(b.caseVide(nvllePos)){
+            this.setPos(nvllPos);
+        }
     }
     
     
