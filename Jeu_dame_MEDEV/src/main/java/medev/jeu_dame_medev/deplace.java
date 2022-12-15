@@ -10,6 +10,6 @@ package medev.jeu_dame_medev;
  */
 public interface deplace {
     
-    public abstract boolean deplace(Board b);
+    public abstract void deplace(boolean t, Board b);
     
 }

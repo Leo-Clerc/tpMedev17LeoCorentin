@@ -14,6 +14,9 @@ public class Board {
     
     private ArrayList<Piece> board;
     
+    public boolean estDansLePlateau(Point2D pos){
+        return (pos.getX()>-1 && pos.getX()<10 && pos.getY()>-1 && pos.getY()<10);
+    }
     public static final int Taille_Plateau = 10;
     
    
@@ -105,11 +108,46 @@ public class Board {
             System.out.println("O: Objet");
             
         };
-
-
     
+    public boolean case_vide(Point2D pos) {
+        for (Piece p: board) {
+            if (p.getPos().equals(pos)) {
+                return false;
+            }
+        }
+        return true;
+    }
     
+    public boolean test_manger(Pion p, Point2D nvllePos, Point2D nvllePos2) {
+        int color = p.getColor();
+        int i = 0;
+        int j = 0;
+        Point2D pos = p.getPos();
+        for (Piece pe: board) {
+            if ((pe.getPos().equals(nvllePos)) && (pe.getColor() != color) && (this.case_vide(nvllePos2))) {
+                return true;
+            }
+        }
+        return false;
+    }
     
-    
-    
+    public void mange(Pion p, Point2D nvllePos, Point2D nvllePos2) {
+        int i = 0;
+        for (Piece pe: board) {
+            if (pe.getPos().equals(nvllePos)) {
+                board.remove(pe);
+                p.setPos(nvllePos2);
+            }
+        
+        
+    }
+    }
 }
+
+
+    
+    
+    
+    
+    
+

@@ -8,7 +8,7 @@ package medev.jeu_dame_medev;
  *
  * @author coco
  */
-public class Piece {
+public abstract class Piece {
     
     private int color;
     
@@ -45,6 +45,7 @@ public class Piece {
         this.pos = new Point2D(pos);
     }
     
+    public abstract void deplace(boolean versDroite, Board b);
     
     
     
