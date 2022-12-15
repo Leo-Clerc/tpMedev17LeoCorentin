@@ -12,6 +12,7 @@ package medev.jeu_dame_medev;
 public class Jeu_dame_MEDEV {
 
     public static void main(String[] args) {
+        Board b = new Board();
         System.out.println("Hello World!");
     }
 }
